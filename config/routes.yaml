@@ -1,0 +1,27 @@
+api:
+  path: /api
+  controller: App\Controller\AuthController::api
+
+me:
+  path: /api/me
+  controller: App\Controller\AuthController::me
+  methods: [GET]
+
+register:
+  path: /api/register
+  controller: App\Controller\AuthController::register
+  methods: [POST]
+
+login_check:
+  path: /api/login_check
+  methods: [POST]
+
+change_password:
+  path: /api/change_password
+  controller: App\Controller\AuthController::changePassword
+  methods: [PUT]
+
+gesdinet_jwt_refresh_token:
+  path: /api/login_refresh
+  controller: gesdinet.jwtrefreshtoken::refresh
+  methods: [POST]
